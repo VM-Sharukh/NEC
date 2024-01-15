@@ -16,7 +16,7 @@
       </div>
       <div class="col-md-8 col-sm-8">
           <h3>Last Logged In : <?php 
-              echo ($LastLoggedIn != NULL) ? GetDisplayDateTime($LastLoggedIn) : 'NA';?>
+              echo ($LastLoggedIn != NULL) ? GetDisplayDateTime($LastLoggedIn) : 'First Time Login';?>
             
           </h3>
       </div>
