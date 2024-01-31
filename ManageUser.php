@@ -13,7 +13,6 @@
   if($mode == 'edit'){
   		$id = $_GET['id'];
   		$GetUserDetails = GetUserDetails($id);
-  		// echo "<pre>";print_r($GetUserDetails);echo "</pre>";die();
   		if(empty($GetUserDetails)){
   			header("Location: UsersList.php");
   		}
@@ -60,7 +59,7 @@
 
 									<div class="col-md-4 col-sm-4 ">
 										<label class="control-label" for="Password">Password</label>
-										<input value="<?php echo $GetUserDetails['Password'];?>" type="text" id="Password" class="form-control" name="Password" placeholder="Password">
+										<input value="<?php echo DecryptData($GetUserDetails['Password']);?>" type="password" id="Password" class="form-control" name="Password" placeholder="Password" onpaste="return false;" ondrop="return false;">
 										<div class="error_msg PasswordError"></div>
 									</div>
 							</div>

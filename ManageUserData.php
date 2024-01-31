@@ -1,8 +1,5 @@
 <?php 
 session_start();
-// echo "<pre>";print_r($_SESSION);echo "</pre>";
-// echo "<pre>";print_r($_POST);echo "</pre>";
-// echo "<pre>";print_r($_FILES);echo "</pre>";die();
 include "dbconn.php";
 
 $UserID = $_SESSION['UserSessionData']['UserID'];
@@ -18,7 +15,7 @@ $status = $message = $redirect = '';
 
 $FullName   = FilterValue($_POST['FullName']);
 $EmailID    = FilterValue($_POST['EmailID']);
-$Password   = FilterValue($_POST['Password']);
+$Password  =  $_POST['Password'] ? EncryptData($_POST['Password']) : '';
 $Gender     = FilterValue($_POST['Gender']);
 $mode     	= FilterValue($_POST['mode']);
 $id     	= FilterValue($_POST['id']);
@@ -91,7 +88,6 @@ if($status !="error"){
 			$query="Update users set FullName = '$FullName',EmailID = '$EmailID',Password = '$Password',Gender = '$Gender',UserProfileImage = '$UserProfileImage',LastUpdated = '$CurrentDateTime' Where UserID = '$id'";
 			$UserMsg = 'User Details Updated Successfully.';
 		}
-
 		$AlertMsgClass = 'alert-success';
 		if ($conn->query($query) !== TRUE) {
 			$AlertMsgClass = 'alert-danger';

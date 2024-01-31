@@ -58,7 +58,8 @@ if(isset($_SESSION['UserSessionData']) && !empty($_SESSION['UserSessionData'])){
                 <input name="EmailID" type="text" class="form-control" placeholder="EmailID">
               </div>
               <div>
-                <input name="Password" type="password" class="form-control" placeholder="Password">
+                <input name="Password" type="password" class="form-control" placeholder="Password" 
+                onpaste="return false;" ondrop="return false;">
               </div>
 
               <div class="error_msg EmailIDError"></div>

@@ -9,9 +9,23 @@ function GetDisplayDateTime($date){
     return date("F j, Y, g:i A", strtotime($date));
 }
 
+function GetDataEncrytionDetails(){
+	return $data = array("AES-128-CTR",'7208131151',"NEC123456",0);
+}
+
+function EncryptData($Value) {
+    list($ciphering,$encryption_iv,$encryption_key,$options) = GetDataEncrytionDetails();
+    return $encryption = openssl_encrypt($Value, $ciphering,$encryption_key, $options, $encryption_iv);
+}
+
+function DecryptData($Value) {
+	list($ciphering,$decryption_iv,$decryption_key,$options) = GetDataEncrytionDetails();
+ 	return $decryption=openssl_decrypt($Value, $ciphering,$decryption_key, $options, $decryption_iv);
+}
+
 function FilterValue($Value){
 	global $conn;
-    $NewValue = htmlspecialchars(trim($Value));
+    $NewValue = filter_var($Value,FILTER_SANITIZE_STRING);
     $NewValue = mysqli_real_escape_string($conn,$NewValue);
     return $NewValue;
 }
