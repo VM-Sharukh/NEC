@@ -1,7 +1,16 @@
-It is a basic application in which admin can login and add users on it. after creating users, new user can login on same URL using their credentials. 
-After login, we are updating user logged in time. we are also maintaining logs of user logging details and  pages that user have visited .
+**Project Info** <br> 
+A PHP application in which admin can login and add users on it by adding basic info like Name, EmailID, Password, Gender, Profile Picture.
+Admin can share the same to user for login into the system using same URL. 
+After login, we are updating user logged in time , maintaining logs of user logging details and pages that user have visited .
 
-Technology used : Vanilla PHP, HTML - CSS, Jquery.
+**System Requirement** <br>
+Install XAMPP on your local machine.
 
-Admin Login Credentials 
-Email ID : admin@gmail.com Password : 9870987666
+**Web Technologies Used** <br>
+**FrontEnd : HTML, CSS, Jquery. <br>
+BackEnd  : Vanilla PHP. <br>
+Database : MySQL** <br>
+
+**Admin Login Credentials**  <br>
+Email ID : admin@gmail.com  <br>
+Password : 1234567890 <br>
