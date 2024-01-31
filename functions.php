@@ -14,13 +14,13 @@ function GetDataEncrytionDetails(){
 }
 
 function EncryptData($Value) {
-    list($ciphering,$encryption_iv,$encryption_key,$options) = GetDataEncrytionDetails();
-    return $encryption = openssl_encrypt($Value, $ciphering,$encryption_key, $options, $encryption_iv);
+    list($Ciphering,$EncryptionIV,$EncryptionKey,$Options) = GetDataEncrytionDetails();
+    return $encryption = openssl_encrypt($Value, $Ciphering,$EncryptionKey, $Options, $EncryptionIV);
 }
 
 function DecryptData($Value) {
-	list($ciphering,$decryption_iv,$decryption_key,$options) = GetDataEncrytionDetails();
- 	return $decryption=openssl_decrypt($Value, $ciphering,$decryption_key, $options, $decryption_iv);
+	list($Ciphering,$DecryptionIV,$DecryptionKey,$Options) = GetDataEncrytionDetails();
+ 	return $decryption=openssl_decrypt($Value, $Ciphering,$DecryptionKey, $Options, $DecryptionIV);
 }
 
 function FilterValue($Value){
