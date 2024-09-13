@@ -26,16 +26,16 @@
   <div class="row" style="<?php echo $UserRoleWiseDisplay;?>">
   <div class="tile_count">
     <div class="col-md-4 col-sm-4  tile_stats_count">
-      <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
+      <span class="count_top"><i class="fa fa-user"></i> Entire Users</span>
       <div class="count"><?php echo $CountAllUsers;?></div>
     </div>
     
     <div class="col-md-4 col-sm-4  tile_stats_count">
-      <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
+      <span class="count_top"><i class="fa fa-user"></i> Entire Females</span>
       <div class="count green"><?php echo $CountFemaleUsers;?></div>
     </div>
     <div class="col-md-4 col-sm-4  tile_stats_count">
-      <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
+      <span class="count_top"><i class="fa fa-user"></i> Entire Males</span>
       <div class="count green"><?php echo $CountMaleUsers;?></div>
     </div>
   </div>
