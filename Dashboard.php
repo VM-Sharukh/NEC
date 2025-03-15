@@ -7,7 +7,7 @@
 
 ?>
 
-<!-- page content -->
+<!-- page content test -->
 <div class="right_col" role="main">
   <br>
   <div class="row">
